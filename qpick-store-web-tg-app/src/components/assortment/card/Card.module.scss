@@ -1,0 +1,45 @@
+.card {
+	&__btnFavorite {
+		@apply absolute top-[40px] right-[40px];
+		&:hover {
+			svg {
+				transition: all 0.3s ease-in;
+				@apply fill-hover-color;
+			}
+		}
+		&Active {
+			@apply absolute top-[40px] right-[40px];
+			svg {
+				@apply fill-hover-color;
+			}
+		}
+	}
+	&__btnCart {
+		@apply w-full h-[50px] p-[5px] text-[15px] rounded-[30px] font-bold bg-button-color-bg text-main-text;
+		transform: translateY(2px);
+		transition: all 0.5s ease-in;
+		&:hover {
+			@apply bg-button-hover-color-bg;
+			transition: all 0.5s ease-in;
+			transform: translateY(-2px);
+		}
+		&Clicked {
+			@apply w-full h-[50px] p-[5px] text-[15px] rounded-[30px] font-bold bg-button-color-bg opacity-60 text-main-text;
+			transform: translateY(2px);
+			transition: all 0.5s ease-in;
+			&:hover {
+				@apply opacity-100;
+				transform: translateY(-2px);
+				transition: all 0.5s ease-in;
+			}
+		}
+	}
+
+	&:hover {
+		transition: all 0.1s ease-in-out;
+		box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.5);
+		button {
+			display: block;
+		}
+	}
+}

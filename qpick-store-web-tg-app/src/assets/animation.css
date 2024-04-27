@@ -1,0 +1,47 @@
+.main-animation-scale-enter {
+	opacity: 0;
+}
+.main-animation-scale-enter-active {
+	opacity: 1;
+	animation: opacityAndScale 2000ms;
+}
+.main-animation-scale-exit {
+	opacity: 1;
+}
+.main-animation-scale-exit-active {
+	opacity: 1;
+}
+
+.main-animation-opacity-enter {
+	opacity: 0;
+}
+.main-animation-opacity-enter-active {
+	opacity: 1;
+	animation: opacity 2000ms;
+}
+.main-animation-opacity-exit {
+	opacity: 1;
+}
+.main-animation-opacity-exit-active {
+	opacity: 1;
+}
+
+@keyframes opacity {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes opacityAndScale {
+	0% {
+		transform: scale(0.9);
+		opacity: 0;
+	}
+	100% {
+		transform: scale(1);	
+		opacity: 1;
+	}
+}
